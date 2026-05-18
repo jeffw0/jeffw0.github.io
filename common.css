@@ -18,6 +18,8 @@
 
 html { scroll-behavior: smooth; font-size: 16px; }
 
+html, body { width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+
 body {
   font-family: Arial, sans-serif;
   background: var(--white);
@@ -40,7 +42,7 @@ ul { list-style: none; }
 .nav-toggle { display: none; color: var(--gray-600); transition: color 0.2s; }
 .nav-toggle:hover { color: var(--gray-900); }
 .nav-toggle svg { display: block; }
-.mobile-menu { display: none; flex-direction: column; gap: 16px; padding: 16px 24px; border-top: 1px solid var(--gray-100); background: var(--white); }
+.mobile-menu { display: none; flex-direction: column; gap: 16px; padding: 16px 24px; border-top: 1px solid var(--gray-100); background: var(--white); box-sizing: border-box; }
 .mobile-menu.open { display: flex; }
 .mobile-menu button { text-align: left; font-size: 0.875rem; color: var(--gray-600); transition: color 0.2s; }
 .mobile-menu button:hover { color: var(--gray-900); }
@@ -117,6 +119,8 @@ footer { border-top: 1px solid var(--gray-100); padding: 32px 24px; background: 
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .nav-toggle { display: block; }
+  .nav-toggle { padding: 8px; border-radius: 6px; }
+  .mobile-menu { position: absolute; top: 64px; left: 0; right: 0; z-index: 90; }
   .hero-name { font-size: 1.875rem; }
   .hero-subtitle { font-size: 1rem; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
