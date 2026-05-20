@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeffrey Wu - Portfolio / Resume</title>
+  <link rel="stylesheet" href="common.css" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/">Jeffrey Wu</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="section-inner">
+      <p class="hero-label">Welcome</p>
+      <h1 class="hero-name">Hi, I'm <span class="accent">Jeffrey</span></h1>
+      <p class="hero-subtitle">Information Technology Graduate &middot; IT System Administrator &middot; Backend Developer</p>
+      <p class="hero-bio">
+        I am an upcoming Information Technology graduate from UMass Boston specializing in system administration and backend development. I am passionate about building efficient tools and reliable infrastructure.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary" onclick="scrollToSection('contact', event)">Get in Touch</a>
+        <a href="/assets/jeffreyresume.pdf" target="_blank" class="btn-secondary" download>Download Resume</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/jeffw0" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="mailto:jeffreywu55@yahoo.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-inner">
+      <h2>About Me</h2>
+      <div class="section-bar"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>As an Information Technology graduate from UMass Boston, I have developed a strong foundation in network infrastructure, backend architecture, scripting, and system support. I am highly comfortable writing Python-based backend services, handling server infrastructure, and ensuring data privacy across applications.</p>
+          <p>I approach technical challenges with a focus on security, analytical problem solving, and clean execution.</p>
+        </div>
+        <div class="about-items">
+          <div class="about-item">
+            <div>
+              <p class="about-item-title">B.S. in Information Technology</p>
+              <p class="about-item-sub">University of Massachusetts Boston (Class of 2026)</p>
+            </div>
+          </div>
+          <div class="about-item">
+            <div>
+              <p class="about-item-title">Quincy, MA</p>
+              <p class="about-item-sub">Open to in-person or remote roles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-inner">
+      <h2>Experience</h2>
+      <div class="section-bar"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="exp-block">
+            <p class="exp-role">IT Intern | Green Rabbit</p>
+            <p class="exp-meta">September 2023 &ndash; December 2025</p>
+            <p>Managed the IT ticket system for the Quality Department across three nationwide facilities. Configured, deployed, and troubleshooted technical hardware to support personnel. Authored comprehensive SOPs, facilitated software retraining, and collaborated cross-functionally to correct systemic data errors, gaining exposure to real-time data exchange via NetSuite ERP.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-inner">
+      <h2>Projects</h2>
+      <div class="section-bar"></div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <p class="project-title">BeaconStudy</p>
+          <p class="project-desc">A campus utility assisting students in locating available study spaces by scraping and synchronizing the university's 25Live scheduling system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-inner">
+      <h2>Skills</h2>
+      <div class="section-bar"></div>
+      <div class="skills-grid">
+        <div>
+          <p class="skill-group-title">Backend & Scripting</p>
+          <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">SQL</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-inner">
+      <h2>Contact</h2>
+      <div class="section-bar"></div>
+      <p class="contact-desc">I am actively looking for new opportunities in IT infrastructure, backend development, and system administration.</p>
+      <div class="contact-list">
+        <a href="mailto:jeffreywu55@yahoo.com">jeffreywu55@yahoo.com</a>
+        <a href="https://github.com/jeffw0" target="_blank" rel="noreferrer">github.com/jeffw0</a>
+      </div>
+      <div style="margin-top: 16px;">
+        <a href="/assets/jeffreyresume.pdf" class="btn-primary" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Jeffrey Wu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function scrollToSection(id, e) {
+      if (e && e.preventDefault) e.preventDefault();
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
