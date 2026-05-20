@@ -55,7 +55,7 @@ h2 { font-size: 1.25rem; font-weight: 600; color: var(--gray-900); margin-bottom
 
 /* Hero */
 #hero { padding-top: 128px; padding-bottom: 80px; padding-left: 24px; padding-right: 24px; }
-.hero-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 12px; }
+.hero-label { font-size: 0.75rem; letter-spacing: 0.12em; color: var(--gray-400); margin-bottom: 12px; }
 .hero-name { font-size: 2.5rem; font-weight: 700; line-height: 1.2; color: var(--gray-900); margin-bottom: 16px; }
 .hero-name .accent { color: var(--accent); }
 .hero-subtitle { font-size: 1.25rem; font-weight: 400; color: var(--gray-500); margin-bottom: 24px; line-height: 1.5; }
