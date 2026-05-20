@@ -3,29 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jeffrey Wu - Portfolio / Resume</title>
+  <title>Jeffrey Wu - Portfolio</title>
   <link rel="stylesheet" href="common.css" />
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Jeffrey's Site" />
   <link rel="manifest" href="/site.webmanifest" />
-    <style>
-      html { scroll-behavior: smooth; }
-    </style>
 </head>
 <body>
 
   <nav class="navbar">
     <div class="nav-inner">
-      <a class="nav-brand" href="/">Jeffrey Wu</a>
+      <a class="nav-brand" href="/index.html">Jeffrey Wu</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><button onclick="scrollToSection('about')">About</button></li>
+        <li><button onclick="scrollToSection('experience')">Experience</button></li>
+        <li><button onclick="scrollToSection('projects')">Projects</button></li>
+        <li><button onclick="scrollToSection('skills')">Skills</button></li>
+        <li><button onclick="scrollToSection('contact')">Contact</button></li>
       </ul>
+      <button class="nav-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Toggle menu">
+        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display:none">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6"  y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button onclick="scrollToSection('about'); toggleMenu()">About</button>
+      <button onclick="scrollToSection('experience'); toggleMenu()">Experience</button>
+      <button onclick="scrollToSection('projects'); toggleMenu()">Projects</button>
+      <button onclick="scrollToSection('skills'); toggleMenu()">Skills</button>
+      <button onclick="scrollToSection('contact'); toggleMenu()">Contact</button>
     </div>
   </nav>
 
@@ -38,12 +54,22 @@
         I am an upcoming Information Technology graduate from UMass Boston specializing in system administration and backend development. I am passionate about building efficient tools and reliable infrastructure.
       </p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn-primary" onclick="scrollToSection('contact', event)">Get in Touch</a>
-        <a href="/assets/jeffreyresume.pdf" target="_blank" class="btn-secondary" download>Download Resume</a>
+        <a href="#contact" class="btn-primary" onclick="scrollToSection('contact', event)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Get in Touch
+        </a>
+        <a href="/assets/jeffreyresume.pdf" target="_blank" class="btn-secondary" download>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
       </div>
       <div class="hero-socials">
-        <a href="https://github.com/jeffw0" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
-        <a href="mailto:jeffreywu55@yahoo.com" aria-label="Email">Email</a>
+        <a href="https://github.com/jeffw0" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+        <a href="mailto:jeffreywu55@yahoo.com" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -59,12 +85,14 @@
         </div>
         <div class="about-items">
           <div class="about-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             <div>
               <p class="about-item-title">B.S. in Information Technology</p>
               <p class="about-item-sub">University of Massachusetts Boston (Class of 2026)</p>
             </div>
           </div>
           <div class="about-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             <div>
               <p class="about-item-title">Quincy, MA</p>
               <p class="about-item-sub">Open to in-person or remote roles</p>
@@ -86,6 +114,23 @@
             <p class="exp-meta">September 2023 &ndash; December 2025</p>
             <p>Managed the IT ticket system for the Quality Department across three nationwide facilities. Configured, deployed, and troubleshooted technical hardware to support personnel. Authored comprehensive SOPs, facilitated software retraining, and collaborated cross-functionally to correct systemic data errors, gaining exposure to real-time data exchange via NetSuite ERP.</p>
           </div>
+          <div class="exp-block">
+            <p class="exp-role">Shoe Expeditor / Retail Associate | Macy’s</p>
+            <p class="exp-meta">September &ndash; December 2024</p>
+            <p>Stored and organized incoming footwear inventory, fulfilled sales associate requests, and processed incoming shipments while maintaining a clean stockroom and sales floor.</p>
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="exp-block">
+            <p class="exp-role">E-commerce Business Owner | Etsy</p>
+            <p class="exp-meta">2022 &ndash; 2024</p>
+            <p>Operated two storefronts, amassing over 1,200 orders. Sourced and sold clothing and home decor, handled all customer service inquiries, and managed shipping logistics.</p>
+          </div>
+          <div class="exp-block">
+            <p class="exp-role">Administrative Assistant | Firearm Safety Instructor</p>
+            <p class="exp-meta">2020 &ndash; 2023</p>
+            <p>Prepared and printed student certificates and training materials. Filled out official forms for the police department and managed various document-related tasks to support the course.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -96,10 +141,35 @@
       <h2>Projects</h2>
       <div class="section-bar"></div>
       <div class="projects-grid">
+
         <div class="project-card">
           <p class="project-title">BeaconStudy</p>
-          <p class="project-desc">A campus utility assisting students in locating available study spaces by scraping and synchronizing the university's 25Live scheduling system.</p>
+          <p class="project-desc">A campus utility assisting students in locating available study spaces by scraping and synchronizing the university's 25Live scheduling system. Implemented strict data privacy protocols and refined administrative controls, account management, and mobile navigation.</p>
+          <div class="project-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQLAlchemy</span><span class="tag">SQL</span><span class="tag">Git</span></div>
+          <div class="project-links">
+            <a href="https://beaconstudy.space" target="_blank" rel="noopener noreferrer" aria-label="Open BeaconStudy live site">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <path d="M15 3h6v6"/>
+                <path d="M10 14L21 3"/>
+              </svg>
+              Live Site
+            </a>
+          </div>
         </div>
+
+        <div class="project-card">
+          <p class="project-title">3D Automation & Game Development</p>
+          <p class="project-desc">Streamlined game development workflows by creating custom Python scripts for asset generation. Automated batch rendering for weapon icons and managed complex character rigging for seamless porting into the Unity engine.</p>
+          <div class="project-tags"><span class="tag">Blender</span><span class="tag">Unity</span><span class="tag">Python</span></div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-title">iOS Application (Work in Progress)</p>
+          <p class="project-desc">Currently planning a collaborative mobile application utilizing the latest Apple development tools. Designed around a shared GitHub monorepo structure for efficient version control and concurrent deployment.</p>
+          <div class="project-tags"><span class="tag">Swift</span><span class="tag">Xcode</span></div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -111,7 +181,23 @@
       <div class="skills-grid">
         <div>
           <p class="skill-group-title">Backend & Scripting</p>
-          <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">SQL</span></div>
+          <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">C++</span><span class="skill-tag">SQL</span><span class="skill-tag">C#</span><span class="skill-tag">Java</span><span class="skill-tag">FastAPI</span><span class="skill-tag">SQLAlchemy</span></div>
+        </div>
+        <div>
+          <p class="skill-group-title">Cybersecurity</p>
+          <div class="skill-tags"><span class="skill-tag">Reverse Engineering</span><span class="skill-tag">Fiddler</span><span class="skill-tag">IDA Pro</span><span class="skill-tag">Ghidra</span><span class="skill-tag">Nmap</span></div>
+        </div>
+        <div>
+          <p class="skill-group-title">Software & Environments</p>
+          <div class="skill-tags"><span class="skill-tag">VS Code</span><span class="skill-tag">Microsoft 365</span><span class="skill-tag">Git</span><span class="skill-tag">Android Studio</span><span class="skill-tag">Xcode</span></div>
+        </div>
+        <div>
+          <p class="skill-group-title">Enterprise</p>
+          <div class="skill-tags"><span class="skill-tag">Windows Server</span><span class="skill-tag">RSAT</span><span class="skill-tag">AD DS</span><span class="skill-tag">GPO</span><span class="skill-tag">NetSuite</span><span class="skill-tag">Odoo</span></div>
+        </div>
+        <div>
+          <p class="skill-group-title">Additional Platforms & Tools</p>
+          <div class="skill-tags"><span class="skill-tag">Blender</span><span class="skill-tag">Unity</span><span class="skill-tag">Generative AI</span><span class="skill-tag">Windows</span><span class="skill-tag">macOS</span><span class="skill-tag">Linux</span></div>
         </div>
       </div>
     </div>
@@ -121,10 +207,11 @@
     <div class="section-inner">
       <h2>Contact</h2>
       <div class="section-bar"></div>
-      <p class="contact-desc">I am actively looking for new opportunities in IT infrastructure, backend development, and system administration.</p>
+      <p class="contact-desc">I am actively looking for new opportunities in IT infrastructure, backend development, and system administration. Feel free to reach out via email or connect with me on GitHub.</p>
       <div class="contact-list">
-        <a href="mailto:jeffreywu55@yahoo.com">jeffreywu55@yahoo.com</a>
-        <a href="https://github.com/jeffw0" target="_blank" rel="noreferrer">github.com/jeffw0</a>
+        <a href="mailto:contact@jeffreywu55@yahoo.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>jeffreywu55@yahoo.com</a>
+        <a href="https://github.com/jeffw0" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> github.com/jeffw0</a>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Quincy, MA</span>
       </div>
       <div style="margin-top: 16px;">
         <a href="/assets/jeffreyresume.pdf" class="btn-primary" download>Download Resume</a>
@@ -146,6 +233,15 @@
       var el = document.getElementById(id);
       if (!el) return;
       el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleMenu() {
+      var menu  = document.getElementById('mobileMenu');
+      var iconM = document.getElementById('icon-menu');
+      var iconX = document.getElementById('icon-close');
+      var open  = menu.classList.toggle('open');
+      iconM.style.display = open ? 'none'  : 'block';
+      iconX.style.display = open ? 'block' : 'none';
     }
   </script>
 </body>
